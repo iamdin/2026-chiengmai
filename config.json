@@ -1,0 +1,22 @@
+{
+  "name": "Din's Afilmory",
+  "title": "Din's Afilmory",
+  "description": "Capturing beautiful moments in life, documenting daily warmth and emotions through my lens.",
+  "url": "https://q.din.page",
+  "accentColor": "#fb7185",
+  "ogImage": {
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "name": "Din",
+    "url": "https://din.page",
+    "avatar": "https://cdn.jsdelivr.net/gh/iamdin/din.static@main/avatar.png"
+  },
+  "social": {
+    "twitter": "@iamdinq"
+  },
+  "extra": {
+    "accessRepo": true
+  }
+}
