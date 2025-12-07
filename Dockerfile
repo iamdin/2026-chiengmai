@@ -47,8 +47,10 @@ RUN sh ./scripts/preinstall.sh
 # Install all dependencies
 RUN pnpm install --frozen-lockfile
 
-# Build the app.
-# The build script in the ssr package.json handles building the web app first.
+# 1. 从 S3 拉取照片数据，生成 manifest
+RUN pnpm run build:manifest
+
+# 2. 构建 SSR 应用（manifest 数据会被打包进 bundle）
 RUN pnpm --filter=@afilmory/ssr build
 
 # -----------------
