@@ -1,20 +1,20 @@
+import { defineBuilderConfig } from "@afilmory/builder";
 import os from "node:os";
 import process from "node:process";
-import { defineBuilderConfig } from "@afilmory/builder";
 
-const env = process.env;
+console.log("process.env", process.env.S3_BUCKET_NAME);
 
 export default defineBuilderConfig(() => ({
   storage: {
     provider: "s3",
-    bucket: env.S3_BUCKET_NAME,
-    region: env.S3_REGION,
-    endpoint: env.S3_ENDPOINT,
-    accessKeyId: env.S3_ACCESS_KEY_ID,
-    secretAccessKey: env.S3_SECRET_ACCESS_KEY,
-    prefix: env.S3_PREFIX,
-    customDomain: env.S3_CUSTOM_DOMAIN,
-    excludeRegex: env.S3_EXCLUDE_REGEX,
+    bucket: process.env.S3_BUCKET_NAME,
+    region: process.env.S3_REGION,
+    endpoint: process.env.S3_ENDPOINT,
+    accessKeyId: process.env.S3_ACCESS_KEY_ID,
+    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+    prefix: process.env.S3_PREFIX,
+    customDomain: process.env.S3_CUSTOM_DOMAIN,
+    excludeRegex: process.env.S3_EXCLUDE_REGEX,
     maxFileLimit: 1000,
     keepAlive: true,
     maxSockets: 64,
