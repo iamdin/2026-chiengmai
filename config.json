@@ -12,11 +12,5 @@
     "name": "Din",
     "url": "https://din.page",
     "avatar": "https://cdn.jsdelivr.net/gh/iamdin/din.static@main/avatar.png"
-  },
-  "social": {
-    "twitter": "@iamdinq"
-  },
-  "extra": {
-    "accessRepo": true
   }
 }

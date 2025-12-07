@@ -1,7 +1,5 @@
 # Dockerfile for Next.js app in a pnpm monorepo
 # This Dockerfile should be built from the root of the monorepo:
-# > docker build -t iris-ssr .
-# > docker run -p 3000:3000 iris-ssr
 
 # -----------------
 # Base stage
@@ -20,7 +18,6 @@ RUN apk update && apk add --no-cache git perl
 RUN git clone https://github.com/Afilmory/Afilmory --depth 1 .
 COPY config.json ./
 COPY builder.config.ts ./
-COPY .env ./
 
 ARG S3_ACCESS_KEY_ID
 ARG S3_SECRET_ACCESS_KEY
